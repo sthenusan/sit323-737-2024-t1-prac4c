@@ -1,9 +1,0 @@
-{"level":"info","message":"New addition operation requested: 5 + 3","service":"calculator-microservice"}
-{"level":"info","message":"New multiplication operation requested: 5 * 3","service":"calculator-microservice"}
-{"level":"error","message":"Invalid input. Please provide valid numbers.","service":"calculator-microservice"}
-{"level":"error","message":"Invalid input. Please provide valid numbers.","service":"calculator-microservice"}
-{"level":"info","message":"New multiplication operation requested: 5 * 8","service":"calculator-microservice"}
-{"level":"info","message":"New subtraction operation requested: 5 - 8","service":"calculator-microservice"}
-{"level":"error","message":"Invalid input. Please provide valid numbers and ensure the divisor is not zero.","service":"calculator-microservice"}
-{"level":"error","message":"Invalid input. Please provide valid numbers and ensure the divisor is not zero.","service":"calculator-microservice"}
-{"level":"info","message":"New division operation requested: 5 / 3","service":"calculator-microservice"}
