@@ -130,6 +130,10 @@ app.get("/modulo", (req, res) => {
   res.json({ result });
 });
 
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
+});
+
 // Start the server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
