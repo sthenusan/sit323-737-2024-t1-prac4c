@@ -8,5 +8,6 @@ spec:
     app: nodejs-app
   ports:
     - protocol: TCP
-      port: 8080 # Port exposed by the service
+      port: 3000 # Port exposed by the service
       targetPort: 3000 # Port your application listens on
+

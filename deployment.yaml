@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: nodejs-app-deployment
 spec:
-  replicas: 3 # Number of replicas (instances) to run
+  replicas: 1 # Number of replicas (instances) to run
   selector:
     matchLabels:
       app: nodejs-app
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: nodejs-app
-          image: hub.docker.com/cloud_native:4_2C
+          image: hub.docker.com/thenusan/cloud_native
           ports:
             - containerPort: 3000 # Port your application listens on

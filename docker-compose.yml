@@ -1,9 +1,10 @@
 version: '3'
 services:
-  web:
+  app:
     build: .
+    image: thenusan/cloud_native:6.2P
     ports:
-      - "3000:3000"
+      - "8080:3000"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
       interval: 10s

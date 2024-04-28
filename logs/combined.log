@@ -13,3 +13,6 @@
 {"level":"error","message":"Invalid input. Please provide a valid non-negative number.","service":"calculator-microservice"}
 {"level":"error","message":"Invalid input. Please provide a valid non-negative number.","service":"calculator-microservice"}
 {"level":"info","message":"New square root operation requested: √5","service":"calculator-microservice"}
+{"level":"info","message":"New square root operation requested: √5","service":"calculator-microservice"}
+{"level":"info","message":"New square root operation requested: √5","service":"calculator-microservice"}
+{"level":"info","message":"New square root operation requested: √5","service":"calculator-microservice"}
