@@ -25,7 +25,7 @@ app.get("/add", (req, res) => {
   const num1 = parseFloat(req.query.num1);
   const num2 = parseFloat(req.query.num2);
   if (isNaN(num1) || isNaN(num2)) {
-    logger.error("Invalid input. Please provide valid numbers.");
+    logger.error("Invalid input. Valid numbers Only.");
     return res
       .status(400)
       .json({ error: "Invalid input. Please provide valid numbers." });
@@ -40,7 +40,7 @@ app.get("/subtract", (req, res) => {
   const num1 = parseFloat(req.query.num1);
   const num2 = parseFloat(req.query.num2);
   if (isNaN(num1) || isNaN(num2)) {
-    logger.error("Invalid input. Please provide valid numbers.");
+    logger.error("Invalid input. Valid numbers Only.");
     return res
       .status(400)
       .json({ error: "Invalid input. Please provide valid numbers." });
@@ -55,10 +55,10 @@ app.get("/multiply", (req, res) => {
   const num1 = parseFloat(req.query.num1);
   const num2 = parseFloat(req.query.num2);
   if (isNaN(num1) || isNaN(num2)) {
-    logger.error("Invalid input. Please provide valid numbers.");
+    logger.error("Invalid input. Valid numbers Only.");
     return res
       .status(400)
-      .json({ error: "Invalid input. Please provide valid numbers." });
+      .json({ error: "Invalid input. Valid numbers Only." });
   }
   const result = num1 * num2;
   logger.info(`New multiplication operation requested: ${num1} * ${num2}`);
@@ -71,11 +71,11 @@ app.get("/divide", (req, res) => {
   const num2 = parseFloat(req.query.num2);
   if (isNaN(num1) || isNaN(num2) || num2 === 0) {
     logger.error(
-      "Invalid input. Please provide valid numbers and ensure the divisor is not zero."
+      "Invalid input. Valid numbers Only and ensure the divisor is not zero."
     );
     return res.status(400).json({
       error:
-        "Invalid input. Please provide valid numbers and ensure the divisor is not zero.",
+        "Invalid input. Valid numbers Only and ensure the divisor is not zero.",
     });
   }
   const result = num1 / num2;
@@ -88,10 +88,10 @@ app.get("/exponentiate", (req, res) => {
   const num1 = parseFloat(req.query.num1);
   const num2 = parseFloat(req.query.num2);
   if (isNaN(num1) || isNaN(num2)) {
-    logger.error("Invalid input. Please provide valid numbers.");
+    logger.error("Invalid input. Valid numbers Only.");
     return res
       .status(400)
-      .json({ error: "Invalid input. Please provide valid numbers." });
+      .json({ error: "Invalid input. Valid numbers Only." });
   }
   const result = Math.pow(num1, num2);
   logger.info(`New exponentiation operation requested: ${num1} ^ ${num2}`);
@@ -102,9 +102,9 @@ app.get("/exponentiate", (req, res) => {
 app.get("/sqrt", (req, res) => {
   const num = parseFloat(req.query.num);
   if (isNaN(num) || num < 0) {
-    logger.error("Invalid input. Please provide a valid non-negative number.");
+    logger.error("Invalid input. Valid  non-negative number Only.");
     return res.status(400).json({
-      error: "Invalid input. Please provide a valid non-negative number.",
+      error: "Invalid input. Valid  non-negative number Only.",
     });
   }
   const result = Math.sqrt(num);
@@ -118,11 +118,11 @@ app.get("/modulo", (req, res) => {
   const num2 = parseFloat(req.query.num2);
   if (isNaN(num1) || isNaN(num2) || num2 === 0) {
     logger.error(
-      "Invalid input. Please provide valid numbers and ensure the divisor is not zero."
+      "Invalid input. Valid numbers Only and ensure the divisor is not zero."
     );
     return res.status(400).json({
       error:
-        "Invalid input. Please provide valid numbers and ensure the divisor is not zero.",
+        "Invalid input. Valid numbers Only and ensure the divisor is not zero.",
     });
   }
   const result = num1 % num2;
