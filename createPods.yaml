@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+  labels:
+    tier: frontend
+spec:
+  containers:
+    - image: thenusan/cloudnative:7.2C
+      name: mynode
+      ports:
+        - containerPort: 3040
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
