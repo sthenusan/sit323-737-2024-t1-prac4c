@@ -5,6 +5,7 @@ services:
     image: thenusan/cloud_native:6.2P
     ports:
       - "8080:3000"
+    container_name: node-calculator
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
       interval: 10s

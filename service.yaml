@@ -3,11 +3,14 @@ kind: Service
 metadata:
   name: nodejs-app-service
 spec:
-  type: NodePort # Expose the service on a specific port on each node
   selector:
+    tier: frontend
     app: nodejs-app
+  clusterIP: 10.99.132.220
+  externalTrafficPolicy: Cluster
   ports:
-    - protocol: TCP
-      port: 3000 # Port exposed by the service
-      targetPort: 3000 # Port your application listens on
-
+    - name: myport
+      port: 8037
+      protocol: TCP
+      targetPort: 3040
+  type: LoadBalancer
